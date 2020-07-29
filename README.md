@@ -65,4 +65,4 @@
  
  </ul>  
 <h2>The brief</h2> 
-<p1>To create an application that creates 'Objects' that is made from a set of predefined rules. This will have to be accopmplished using the technologies and methodologies taught. </p1>
+<p1>We needed to plan, design and implement a solution to automate the workflows and deployments of an application that was given to us. During this, we would need to implement the technologies we have learnt and used during our training.  </p1>
