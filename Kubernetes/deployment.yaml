@@ -20,4 +20,3 @@ spec:
         ports:
         - name: http-port
           containerPort: 9966
-

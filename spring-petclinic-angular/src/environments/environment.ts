@@ -23,5 +23,5 @@
 
 export const environment = {
   production: false,
-  REST_API_URL: 'http://spring-petclinic-rest/petclinic/api/'
+  REST_API_URL: 'http://spring-petclinic-rest-cluster/petclinic/api/'
 };
