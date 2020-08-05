@@ -7,11 +7,43 @@ spec:
     app: spring-petclinic-rest
   ports: 
   - protocol: TCP
+    port: 81
+    targetPort: 9966
+  type: LoadBalancer
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-petclinic-rest-cluster
+spec:
+  selector:
+    app: spring-petclinic-rest
+  ports:
+  - protocol: TCP
     port: 9966
     targetPort: 9966
   type: ClusterIP
 
+
 ---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-petclinic-angular-cluster
+spec:
+  selector:
+    app: spring-petclinic-angular
+  ports:
+  - protocol: TCP
+    port: 4200
+    targetPort: 4200
+  type: ClusterIP
+
+---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -22,6 +54,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 4200
+    targetPort: 80
   type: LoadBalancer
-
