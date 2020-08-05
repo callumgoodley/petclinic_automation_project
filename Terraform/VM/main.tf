@@ -37,7 +37,7 @@ resource "azurerm_public_ip" "myterraformpublicip" {
 }
 
 data "template_file" "cloudconfig" {
-  template = "${file("~/Terraform-T/Terraform/VM/template.tpl")}"
+  template = "${file("/home/jenkins/.jenkins/workspace/build-test/petclinic_automation_project/Terraform/VM/template.tpl")}"
 }
 
 data "template_cloudinit_config" "config" {
