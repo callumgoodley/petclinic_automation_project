@@ -16,9 +16,9 @@ resource "azure_security_group_rule" "ssh_access" {
   type                       = "Inbound"
   action                     = "Allow"
   priority                   = 200
-  source_address_prefix      = "100.0.0.0/32"
+  source_address_prefix      = "*"
   source_port_range          = "*"
-  destination_address_prefix = "10.0.0.0/32"
+  destination_address_prefix = "*"
   destination_port_range     = "80"
   protocol                   = "TCP"
 }
@@ -29,9 +29,9 @@ resource "azure_security_group_rule" "ssh_access" {
   type                       = "Inbound"
   action                     = "Allow"
   priority                   = 300
-  source_address_prefix      = "100.0.0.0/32"
+  source_address_prefix      = "*"
   source_port_range          = "*"
-  destination_address_prefix = "10.0.0.0/32"
+  destination_address_prefix = "*"
   destination_port_range     = "4200"
   protocol                   = "TCP"
 }
@@ -42,9 +42,9 @@ resource "azure_security_group_rule" "ssh_access" {
   type                       = "Inbound"
   action                     = "Allow"
   priority                   = 400
-  source_address_prefix      = "100.0.0.0/32"
+  source_address_prefix      = "*"
   source_port_range          = "*"
-  destination_address_prefix = "10.0.0.0/32"
+  destination_address_prefix = "*"
   destination_port_range     = "9966"
   protocol                   = "TCP"
 }
