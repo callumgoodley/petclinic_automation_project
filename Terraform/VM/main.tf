@@ -5,50 +5,55 @@ resource "azurerm_virtual_network" "main" {
   resource_group_name = var.resource_group_name
 }
 
-resource "azure_security_group" "web" {
-  name     = "security-group"
-  location = var.resource_group_location
+resource "azurerm_network_security_group" "example" {
+  name                = "acceptanceTestSecurityGroup1"
+  location            = var.resource_group_location
   resource_group_name = var.resource_group_name
+  security_rule {
+    name                       = "test123"
+    priority                   = 100
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "80"
+    destination_port_range     = "*"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+  security_rule {
+    name                       = "test1234"
+    priority                   = 200
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "9966"
+    destination_port_range     = "*"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+  security_rule {
+    name                       = "test1235"
+    priority                   = 300
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "4200"
+    destination_port_range     = "*"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+  tags = {
+    environment = "Production"
+  }
+}
+resource "azurerm_subnet" "internal" {
+  name                 = "internal"
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = azurerm_virtual_network.main.name
+  address_prefix       = "10.0.2.0/24"
 }
 
-resource "azure_security_group_rule" "ssh_access" {
-  name                       = "ssh-access-rule"
-  security_group_names       = ["${azure_security_group.web.name}"]
-  type                       = "Inbound"
-  action                     = "Allow"
-  priority                   = 200
-  source_address_prefix      = "*"
-  source_port_range          = "*"
-  destination_address_prefix = "*"
-  destination_port_range     = "80"
-  protocol                   = "TCP"
-}
 
-resource "azure_security_group_rule2" "ssh_access2" {
-  name                       = "ssh-access-rule2"
-  security_group_names       = ["${azure_security_group.web.name}"]
-  type                       = "Inbound"
-  action                     = "Allow"
-  priority                   = 300
-  source_address_prefix      = "*"
-  source_port_range          = "*"
-  destination_address_prefix = "*"
-  destination_port_range     = "4200"
-  protocol                   = "TCP"
-}
-
-resource "azure_security_group_rule3" "ssh_access3" {
-  name                       = "ssh-access-rule3"
-  security_group_names       = ["${azure_security_group.web.name}"]
-  type                       = "Inbound"
-  action                     = "Allow"
-  priority                   = 400
-  source_address_prefix      = "*"
-  source_port_range          = "*"
-  destination_address_prefix = "*"
-  destination_port_range     = "9966"
-  protocol                   = "TCP"
-}
 resource "azurerm_subnet" "internal" {
   name                 = "internal"
   resource_group_name  = var.resource_group_name
