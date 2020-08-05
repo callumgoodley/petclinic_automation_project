@@ -1,3 +1,3 @@
-docker-compose build
-docker-compose push
-docker-compose up -d
+sudo docker-compose build
+sudo docker-compose push
+sudo docker-compose up -d
