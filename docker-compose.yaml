@@ -15,7 +15,7 @@ services:
                 depends_on:
                         - backend
         nginx:
-                image: rajahamza/nginx-pet
+                image: rajahamza104/nginx-pet
                 build: ./spring-petclinic-angular/nginx
                 depends_on: 
                         - frontend
