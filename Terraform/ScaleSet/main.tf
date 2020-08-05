@@ -49,7 +49,7 @@ resource "azurerm_lb_probe" "example" {
 }
 
 data "template_file" "cloudconfig" {
-  template = "${file("~/Terraform-T/Terraform/ScaleSet/template.tpl")}"
+  template = "${file("/home/jenkins/.jenkins/workspace/build-test/petclinic_automation_project/Terraform/ScaleSet/template.tpl")}"
 }
 
 data "template_cloudinit_config" "config" {
