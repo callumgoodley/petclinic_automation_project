@@ -6,8 +6,9 @@ resource "azurerm_virtual_network" "main" {
 }
 
 resource "azure_security_group" "web" {
-  name     = var.resource_group_name
+  name     = "security-group"
   location = var.resource_group_location
+  resource_group_name = var.resource_group_name
 }
 
 resource "azure_security_group_rule" "ssh_access" {
@@ -23,8 +24,8 @@ resource "azure_security_group_rule" "ssh_access" {
   protocol                   = "TCP"
 }
 
-resource "azure_security_group_rule" "ssh_access" {
-  name                       = "ssh-access-rule"
+resource "azure_security_group_rule2" "ssh_access2" {
+  name                       = "ssh-access-rule2"
   security_group_names       = ["${azure_security_group.web.name}"]
   type                       = "Inbound"
   action                     = "Allow"
@@ -36,8 +37,8 @@ resource "azure_security_group_rule" "ssh_access" {
   protocol                   = "TCP"
 }
 
-resource "azure_security_group_rule" "ssh_access" {
-  name                       = "ssh-access-rule"
+resource "azure_security_group_rule3" "ssh_access3" {
+  name                       = "ssh-access-rule3"
   security_group_names       = ["${azure_security_group.web.name}"]
   type                       = "Inbound"
   action                     = "Allow"
