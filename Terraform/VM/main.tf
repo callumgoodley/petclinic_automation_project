@@ -96,4 +96,7 @@ data "azurerm_subnet" "example" {
     name = azurerm_subnet.internal.name
     resource_group_name = var.resource_group_name
     virtual_network_name = azurerm_virtual_network.main.name
+    depends_on = [
+      azurerm_virtual_network.main
+      ]
 }
