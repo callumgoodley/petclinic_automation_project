@@ -1,2 +1,2 @@
-cd /home/jenkins/.jenkins/workspace/Testing3/spring-petclinic-angular
+cd this should fail
 ng test --watch=false --browsers=ChromeHeadless
