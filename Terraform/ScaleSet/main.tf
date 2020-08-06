@@ -97,7 +97,7 @@ resource "azurerm_virtual_machine_scale_set" "example" {
   os_profile {
     computer_name_prefix = "testvm"
     admin_username       = "azureuser"
-    admin_password = "Pas5word"
+    admin_password = var.password
     custom_data = "${data.template_cloudinit_config.config.rendered}"
   }
 
