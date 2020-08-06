@@ -1,3 +1,3 @@
-sudo kubectl apply -f deployment.yaml
-sudo kubectl apply -f front-deployment.yaml
-sudo kubectl apply -f service.yaml
+sudo kubectl apply -f Kubernetes/deployment.yaml
+sudo kubectl apply -f Kubernetes/front-deployment.yaml
+sudo kubectl apply -f Kubernetes/service.yaml
