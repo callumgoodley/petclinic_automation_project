@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                sh "bash Jenkins/Test.sh"
+                sh "bash Jenkins/Test1.sh"
             }
         }
         stage('Build-Image') {
