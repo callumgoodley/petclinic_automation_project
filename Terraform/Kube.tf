@@ -1,10 +1,20 @@
-variable "resource_group_name" {}
-variable "resource_group_location" {}
+provider "azurerm" {
+  features {}
+}
+
+variable "prefix" {
+  default = "project"
+}
+
+resource "azurerm_resource_group" "main" {
+  name     = "${var.prefix}-resources"
+  location = "uksouth"
+}
 
 resource "azurerm_kubernetes_cluster" "example" {
   name                = "example-aks1"
-  location            = var.resource_group_location
-  resource_group_name = var.resource_group_name
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
   dns_prefix          = "exampleaks1"
 
   default_node_pool {
