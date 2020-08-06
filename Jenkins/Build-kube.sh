@@ -5,7 +5,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 
 if cd petclinic_automation_project; then git pull; else git clone https://github.com/callumgoodley/petclinic_automation_project.git; fi
 cd petclinic_automation_project
-git checkout terra-kube
+git checkout Testing
 cd Terraform
 
 terraform init
