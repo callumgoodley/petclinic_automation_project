@@ -6,4 +6,5 @@ pwd
 cd /home/jenkins/.jenkins/workspace/Testing3/spring-petclinic-angular
 sudo rm package-lock.json
 sudo npm install -g n
+sudo n latest
 ng test --watch=false --browsers=ChromeHeadless
