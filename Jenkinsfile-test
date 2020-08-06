@@ -16,7 +16,7 @@ pipeline {
                 sh "bash Jenkins/Build-kube-test.sh"
             }
         }
-        stage('Install testing requirements')
+        stage('Install testing requirements'){
             steps {
                 sh "bash Jenkins/npm-install.sh"
             }
@@ -37,4 +37,4 @@ pipeline {
             }
         }
     }
-
+}
