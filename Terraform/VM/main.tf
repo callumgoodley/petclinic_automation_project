@@ -79,7 +79,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
   os_profile {
     computer_name  = "myvm"
     admin_username = "azureuser"
-    admin_password = "Pas5word"
+    admin_password = var.password
     custom_data    = "${data.template_cloudinit_config.config.rendered}"
   }
 
