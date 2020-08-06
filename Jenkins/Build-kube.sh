@@ -19,6 +19,6 @@ cd ScaleSet
 terraform init
 terraform plan
 terraform apply -auto-approve 
-az aks install-cli
-az aks get-credentials --resource-groupexample-resources --name example-aks1
-kubectl get nodes
+sudo az aks install-cli
+sudo az aks get-credentials --resource-groupexample-resources --name example-aks1
+sudo kubectl get nodes
