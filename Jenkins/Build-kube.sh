@@ -7,7 +7,6 @@ if cd petclinic_automation_project; then git pull; else git clone https://github
 cd petclinic_automation_project
 git checkout terra-kube
 cd Terraform
-cd ScaleSet 
 
 terraform init
 terraform plan
