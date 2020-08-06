@@ -6,7 +6,7 @@ pwd
 cd /home/jenkins/.jenkins/workspace/Testing3/spring-petclinic-angular
 pwd
 ls
-sudo rm package-lock.json
+sudo npm --version
 ls
 sudo npm install -g n
 sudo n latest
