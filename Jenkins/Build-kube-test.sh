@@ -9,9 +9,9 @@ git checkout Testing
 cd Terraform
 cd Test
 
-terraform init
-terraform plan
-terraform apply -auto-approve 
+sudo terraform init
+sudo terraform plan
+sudo terraform apply -auto-approve 
 sudo az aks install-cli
 sudo az aks get-credentials --resource-group project-resources2 --name example-aks2
 sudo kubectl get nodes
