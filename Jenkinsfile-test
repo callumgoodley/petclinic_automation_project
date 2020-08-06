@@ -16,6 +16,11 @@ pipeline {
                 sh "bash Jenkins/Build-kube-test.sh"
             }
         }
+        stage('Install testing requirements')
+            steps {
+                sh "bash Jenkins/npm-install.sh"
+                }
+        }
         stage('Testing') {
             steps {
                 sh "bash Jenkins/Test.sh"
