@@ -20,5 +20,5 @@ terraform init
 terraform plan
 terraform apply -auto-approve 
 sudo az aks install-cli
-sudo az aks get-credentials --resource-groupexample-resources --name example-aks1
+sudo az aks get-credentials --resource-group example-resources --name example-aks1
 sudo kubectl get nodes
