@@ -5,7 +5,6 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s http
 sudo mv ./kubectl /usr/local/bin/kubectl
 
 
-cd petclinic_automation_project
 git checkout Testing
 cd Terraform
 cd Test
