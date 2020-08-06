@@ -1,3 +1,4 @@
+sudo apt install npm -y
 sudo npm uninstall -g angular-cli @angular/cli
 sudo npm cache clean
 sudo npm install -g @angular/cli@8.0.3
