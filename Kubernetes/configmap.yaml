@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  default.conf: |
+    upstream spring-petclinic-rest {
+           server spring-petclinic-rest:9966/petclinic/api/owners;
+    }
+    server {
+        listen 80;
+        server_name spring-petclinic-angular;
+
+        location / {
+           root /usr/share/nginx/html;
+           index index.html index.htm;
+        }
+
+        location /owners {
+            proxy_pass http://spring-petclinic-rest;
+            }
+    }
