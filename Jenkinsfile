@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build-Terra') {
             steps {
                 sh "bash Jenkins/Build-kube.sh"
+            }
+        }
+        stage('Build-Image') {
+            steps {
+                sh "bash Jenkins/Build-image.sh"
             }
         }
         stage('Deployment') {
