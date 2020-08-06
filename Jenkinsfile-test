@@ -19,7 +19,7 @@ pipeline {
         stage('Install testing requirements')
             steps {
                 sh "bash Jenkins/npm-install.sh"
-                }
+            }
         }
         stage('Testing') {
             steps {
@@ -37,4 +37,4 @@ pipeline {
             }
         }
     }
-}
+
