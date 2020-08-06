@@ -3,17 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "bash Jenkins/Build.sh"
+                sh "bash Jenkins/Build-kube.sh"
             }
         }
         stage('Test') {
             steps{
-                sh "bash Jenkins/Test.sh"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh "bash Jenkins/Deploy.sh"
+                sh "bash Jenkins/Kubernetes.sh"
             }
         }
     }
