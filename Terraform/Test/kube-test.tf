@@ -7,7 +7,7 @@ variable "prefix" {
 }
 
 resource "azurerm_resource_group" "main" {
-  name     = "${var.prefix}-resources"
+  name     = "${var.prefix}-resources2"
   location = "uksouth"
 }
 
