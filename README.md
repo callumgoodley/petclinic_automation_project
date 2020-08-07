@@ -126,3 +126,4 @@
 <p>We chose Kubernetes for a number of reasons. We were using docker to create our images and Kubernetes is compatible with Docker. Since we were using azure, kubernetes allows for the deployments of clusters in azure.</p>
 <h1 id="pricing">Pricing</h1>
 <p><img src="https://i.imgur.com/3ns1fGo.jpg" alt="enter image description here"></p>
+
