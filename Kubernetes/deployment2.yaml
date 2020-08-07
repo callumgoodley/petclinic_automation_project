@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-petclinic-rest2
+  labels:
+    app: spring-petclinic-rest2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-petclinic-rest2
+  template:
+    metadata:
+      labels:
+        app: spring-petclinic-rest2
+    spec:
+      containers:
+      - name: spring-petclinic-rest2
+        image: rajahamza104/spring-pet-clinic
+        ports:
+        - name: http-port
+          containerPort: 9966

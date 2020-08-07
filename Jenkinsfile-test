@@ -13,7 +13,12 @@ pipeline {
         }
         stage('Deploy Terraform'){
             steps {
-                sh "bash Jenkins/Build-kube.sh"
+                sh "bash Jenkins/Build-kube-test.sh"
+            }
+        }
+        stage('Testing') {
+            steps {
+                sh "bash Jenkins/Test1.sh"
             }
         }
         stage('Build-Image') {
@@ -23,7 +28,7 @@ pipeline {
         }
         stage('Deployment') {
             steps{
-                sh "bash Jenkins/Kubernetes.sh"
+                sh "bash Jenkins/Kubernetes3.sh"
             }
         }
     }
