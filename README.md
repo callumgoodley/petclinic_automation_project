@@ -104,6 +104,8 @@
 <p><img src="https://i.imgur.com/JVRe3cH.png" alt="enter image description here"></p>
 <h3 id="git">Git Deployment</h3>
 <p><img src="https://i.imgur.com/Kg406RG.png" alt="enter image description here"></p>
+<h3 id="git">Kubernetes Communication</h3>
+<h3 id src="https://i.imgur.com/XT3JEMZ.png" alt="enter image description here"></p>
 <h1 id="risk-assessment">Risk Assessment</h1>
 <p><img src="https://i.imgur.com/nnljm6E.png" alt="enter image description here"></p>
 <h1 id="technologies">Technologies</h1>
