@@ -4,7 +4,7 @@ metadata:
   name: spring-petclinic-rest2
 spec:
   selector:
-    app: spring-petclinic-rest
+    app: spring-petclinic-rest2
   ports: 
   - protocol: TCP
     port: 81
@@ -19,7 +19,7 @@ metadata:
   name: spring-petclinic-rest-cluster2
 spec:
   selector:
-    app: spring-petclinic-rest
+    app: spring-petclinic-rest2
   ports:
   - protocol: TCP
     port: 9966
@@ -35,7 +35,7 @@ metadata:
   name: spring-petclinic-angular-cluster2
 spec:
   selector:
-    app: spring-petclinic-angular
+    app: spring-petclinic-angular2
   ports:
   - protocol: TCP
     port: 80
@@ -50,7 +50,7 @@ metadata:
   name: spring-petclinic-angular2
 spec:
   selector:
-    app: spring-petclinic-angular
+    app: spring-petclinic-angular2
   ports:
   - protocol: TCP
     port: 80
