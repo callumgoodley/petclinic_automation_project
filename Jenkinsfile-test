@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Deployment') {
             steps{
-                sh "bash Jenkins/Kubernetes.sh"
+                sh "bash Jenkins/Kubernetes2.sh"
             }
         }
     }
