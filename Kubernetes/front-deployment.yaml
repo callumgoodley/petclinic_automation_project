@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: spring-petclinic-angular
-        image: rajahamza104/frontend2
+        image: rajahamza104/spring-pet-clinic-front
         ports:
         - name: http-port
           containerPort: 80
