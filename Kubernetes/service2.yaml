@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-petclinic-rest
+  name: spring-petclinic-rest2
 spec:
   selector:
     app: spring-petclinic-rest
@@ -16,7 +16,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-petclinic-rest-cluster
+  name: spring-petclinic-rest-cluster2
 spec:
   selector:
     app: spring-petclinic-rest
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-petclinic-angular-cluster
+  name: spring-petclinic-angular-cluster2
 spec:
   selector:
     app: spring-petclinic-angular
@@ -47,7 +47,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-petclinic-angular
+  name: spring-petclinic-angular2
 spec:
   selector:
     app: spring-petclinic-angular
