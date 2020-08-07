@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-petclinic-angular
+  name: spring-petclinic-angular2
   labels:
-    app: spring-petclinic-angular
+    app: spring-petclinic-angular2
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: spring-petclinic-angular
+      app: spring-petclinic-angular2
   template:
     metadata:
       labels:
-        app: spring-petclinic-angular
+        app: spring-petclinic-angular2
     spec:
       containers:
-      - name: spring-petclinic-angular
+      - name: spring-petclinic-angular2
         image: rajahamza104/spring-pet-clinic-front
         ports:
         - name: http-port

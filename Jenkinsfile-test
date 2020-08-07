@@ -16,11 +16,6 @@ pipeline {
                 sh "bash Jenkins/Build-kube-test.sh"
             }
         }
-        stage('Install testing requirements'){
-            steps {
-                sh "bash Jenkins/npm-install.sh"
-            }
-        }
         stage('Testing') {
             steps {
                 sh "bash Jenkins/Test1.sh"
@@ -33,7 +28,7 @@ pipeline {
         }
         stage('Deployment') {
             steps{
-                sh "bash Jenkins/Kubernetes.sh"
+                sh "bash Jenkins/Kubernetes3.sh"
             }
         }
     }
