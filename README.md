@@ -101,7 +101,7 @@
 <h3 id="deployment">Deployment with Kubernetes</h3>
 <p><img src="https://i.imgur.com/xwTj7Tt.png" alt="enter image description here"></p>
 <h3 id="automation">Automation Flow</h3>
-<p><img src="https://i.imgur.com/EBRh3K9.png" alt="enter image description here"></p>
+<p><img src="https://i.imgur.com/JVRe3cH.png" alt="enter image description here"></p>
 <h3 id="git">Git Deployment</h3>
 <p><img src="https://i.imgur.com/Kg406RG.png" alt="enter image description here"></p>
 <h1 id="risk-assessment">Risk Assessment</h1>
